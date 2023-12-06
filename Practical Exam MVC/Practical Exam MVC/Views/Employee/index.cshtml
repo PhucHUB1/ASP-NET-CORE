@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Employee Page";
+}
+<div class="container">
+    <h1>Employee</h1>
+    <a class="text-primary" asp-controller="" asp-action="Create">Create a Product</a>
+    <table class="table table-bordered table-striped">
+        <thead>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Rank</th>
+        <th>DepartmentID</th>
+       
+        </thead>
+        <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Name</td>
+                <td>@item.Rank</td>
+                <td>@item.DepartmentID</td>
+           
+                <td>
+                    <button class="btn btn-primary" > <a href="#">Edit</a> </button>
+                    
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>
